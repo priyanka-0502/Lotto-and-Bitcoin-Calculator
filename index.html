@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/bitcoin-value-calculator.js"></script>
+    <script type="text/javascript" src="js/lotto-calculator.js"></script>
+    <title>Lotto Calculator</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <p>Lotto & Bitcoin</p>
+        </div>
+    </header>
+    <aside>
+        <div class="txt-header">
+            <p>The Irish Lotto</p>
+        </div>
+        <div class="para">
+            <p>Since 16th April 1988, the Irish Lotto draw takes place every Saturday at 8pm. On 30th May 1990 an
+                additional Wednesday evening draw was introduced. </p>
+            <p>What would EUR 100 in winnings invested on a draw date be worth in Euro now? </p>
+            <p>Enter a date and time in the form to get the next draw date and time, with the current value of your
+                investment.</p>
+        </div>
+    </aside>
+    <section class="date-time-input">
+        <div class="section-header">
+            <p>Enter a Date and Time</p>
+        </div>
+        <form class="date-picker-input" onsubmit="return false">
+            <input type="datetime-local" name="dateTimeInput" id="dateTimeInput" required>
+            <input type="submit" class="submit-btn" value="Send" onclick="getNextLottoDraw()">
+        </form>
+    </section>
+    <section class="date-time-display">
+        <table class="results-table">
+            <tr>
+                <th>DRAW DATE/TIME</th>
+                <th>YOUR BITCOIN'S VALUE</th>
+            </tr>
+            <tr>
+                <td id="displayDate"></td>
+                <td id="displayValue"></td>
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>
